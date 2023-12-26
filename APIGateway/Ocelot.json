@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/r/{id}",
+      "DownstreamPathTemplate": "/api/res/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "c_res_api",
+          "Port": 44370
+        }
+      ]
+    },
+
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/c/{id}",
+      "DownstreamPathTemplate": "/api/contact/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "c_contact_api",
+          "Port": 44390
+        }
+      ]
+    }
+  ]
+}
